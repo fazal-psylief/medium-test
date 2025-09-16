@@ -1,17 +1,17 @@
-export const Quote = ()=>{
-    return <div className="bg-slate-100 h-screen flex justify-center flex-col">
-            <div className="flex justify-center">
-                <div className="max-w-lg">
-                    <div className="max-w-lg text-3xl font-bold">
-                        "The coustmer support I received was exceptional. The support team went above and beyond to address my concerns."
-                    </div>
-                    <div className="max-w-md text-xl font-semibold mt-4">
-                        Jules Winnfield
-                    </div>
-                    <div className="max-w-md text-sm text-slate-400 font-light">
-                        CEO | Acme corp 
-                    </div>
+export const Quote = () => {
+    return (
+        <div className="h-full flex items-center justify-center p-10">
+            <div className="max-w-lg mx-auto text-center">
+                <div className="text-2xl md:text-3xl font-serif font-semibold text-gray-800 dark:text-gray-100 mb-6">
+                    "AI killed my coding brain but I’m rebuilding it"
+                </div>
+                <div className="text-lg font-bold text-gray-700 dark:text-gray-200 mb-1">
+                    Fazal Singh
+                </div>
+                <div className="text-sm text-slate-400 dark:text-slate-400 font-light">
+                    Full Stack Developer
                 </div>
             </div>
-    </div>
+        </div>
+    );
 }

@@ -5,7 +5,7 @@ compatibility_date = "2024-11-25"
 # compatibility_flags = [ "nodejs_compat" ]
 
 [vars]
-DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiNjAyOGFmMWItZWI4OS00NDM2LTgwYTAtNzJlNzIxZTdlZjM4IiwidGVuYW50X2lkIjoiZDgxY2NjNGViMTc3ZmVkNTlmMzA5OWVmNjc4ZDAyNzIxM2Y5NGQyYzI2MGE0NTdjZGJmNTI5NzliN2NiOTA0MCIsImludGVybmFsX3NlY3JldCI6IjE2NmU3ZmVmLTk1NDEtNDc3Zi1iMTAwLTIzNDUwYmQzYzU2YiJ9.uIZuR6GcE6yggu6Be64HeVzr7GCh_7bB6JJnKsdIirw" 
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKV1kxMUNZTlpWVDVXVDI5V1lQUEo3R0UiLCJ0ZW5hbnRfaWQiOiJkMzQ3Y2U2OWIwMjg0ODEzNWJmYzA2YTJhMDM0ZWEzZTMyZDU3N2YxMmY0NWFiZThjMjBjMGZlYjdkYTQ4M2VlIiwiaW50ZXJuYWxfc2VjcmV0IjoiYTczOWI4YTAtMjg2Ny00NmE0LWFlYWEtNzAyMTgwNDBmMDE4In0.8XO2SBbtPn5SAKpKhylHwjsvmNZnUZvRTHT8HXwnfPU"
 JWT_SECRET = "secret"
 
 # [[kv_namespaces]]
@@ -27,3 +27,9 @@ JWT_SECRET = "secret"
 # [observability]
 # enabled = true
 # head_sampling_rate = 1
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
+
+

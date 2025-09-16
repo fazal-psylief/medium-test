@@ -2,41 +2,31 @@ import { Blog } from "../hooks/hooks"
 import { Appbar } from "./AppBar"
 import { Avatar } from "./BlogCard"
 
-export const FullBlog = ({ blog }: {blog: Blog})=>{
-    return <div>
-            <Appbar/>
-                <div className="flex justify-center">
-                    <div className="grid grid-cols-12 px-10 w-full pt-200 max-w-screen-lg pt-12">
-                        <div className="col-span-8">
-                            <div className="text-5xl font-extrabold">
-                                {blog.title}
-                            </div>
-                            <div className="text-slate-500 pt-2">
-                                Post on 2nd Dec 2023
-                            </div>
-                            <div className="pt-4">
-                                {blog.content}
-                            </div>
-                        </div>
-                        <div className="col-span-4">
-                            <div className="text-slate-600 text-lg">
-                                Author
-                            </div>
-                            <div className="flex">
-                                <div className="pr-4 flex flex-col justify-center">
-                                    <Avatar name={blog.author.name || "Anonymus"}/>
-                                </div>
-                                <div>
-                                    <div className="text-xl font-extrabold">
-                                        {blog.author.name || "Anonymus"}
-                                    </div>  
-                                    <div className="pt-2 text-slate-500">
-                                        Random jibrish about the author becuase currently we don't have any author 
-                                    </div>  
-                                </div>    
-                            </div>                         
-                        </div>
-                    </div>
-                </div>
+export const FullBlog = ({ blog }: { blog: Blog }) => {
+  return (
+    <div className="bg-white dark:bg-[#181818] min-h-screen">
+      <Appbar />
+      <div className="flex justify-center gap-8 max-w-7xl mx-auto mt-8 px-4">
+        {/* Main Blog Content */}
+        <div className="flex-1 max-w-2xl">
+          <div className="border-b border-gray-200 dark:border-gray-700 pb-8 mb-8">
+            <div className="flex items-center gap-2 mb-4">
+              <Avatar name={blog.author.name || "Anonymous"} />
+              <span className="text-sm text-gray-700 dark:text-gray-300 font-semibold">{blog.author.name || "Anonymous"}</span>
+              <span className="mx-2 text-xs text-gray-400">•</span>
+              <span className="text-xs text-gray-400">2nd Feb 2024</span>
             </div>
-}
+            <div className="text-4xl font-extrabold font-serif text-black dark:text-white mb-4">
+              {blog.title}
+            </div>
+            <div className="text-lg text-gray-700 dark:text-gray-200 mb-6">
+              {blog.content}
+            </div>
+          </div>
+        </div>
+        {/* Image Placeholder (for visual consistency) */}
+        <div className="w-80 h-56 bg-gray-200 dark:bg-gray-700 rounded-lg flex-shrink-0 hidden lg:block mt-4"></div>
+      </div>
+    </div>
+  );
+};
