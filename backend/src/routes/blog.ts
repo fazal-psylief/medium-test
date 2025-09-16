@@ -13,7 +13,6 @@ export const blogRouter = new Hono<{
         userId: string
     }
 }>();
-
 //Middleware 
 const authMiddleware = async (c: any, next: any) => {
     const authHeader = c.req.header("authorization") || "";
@@ -74,8 +73,6 @@ const authMiddleware = async (c: any, next: any) => {
     return c.json({ id: blog.id });
   });
   
- 
- 
 blogRouter.get('/bulk', async (c) => {
     try {
         const prisma = new PrismaClient({
@@ -104,7 +101,6 @@ blogRouter.get('/bulk', async (c) => {
     }
 });
 
-  
 blogRouter.get('/:id', async(c) => {
     const id = c.req.param("id");
     const prisma = new PrismaClient({
@@ -135,4 +131,3 @@ blogRouter.get('/:id', async(c) => {
         return c.json({message:"blog not found"})
     }
   })
-  
