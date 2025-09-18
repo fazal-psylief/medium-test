@@ -9,9 +9,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <BrowserRouter>
-        {/* Background wrapper */}
         <div className="min-h-screen w-full bg-[#f8fafc] relative">
-          {/* Bottom Fade Grid Background */}
           <div
             className="absolute inset-0 z-0"
             style={{
@@ -26,9 +24,7 @@ function App() {
                 "radial-gradient(ellipse 70% 60% at 50% 100%, #000 60%, transparent 100%)",
             }}
           />
-
-          {/* Routes */}
-          <div className="relative z-10"> {/* ensures content is above background */}
+          <div className="relative z-10">
             <Routes>
               <Route path="/" element={<Signup />} />
               <Route path="/signup" element={<Signup />} />
@@ -43,5 +39,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

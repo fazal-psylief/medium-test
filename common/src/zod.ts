@@ -9,7 +9,6 @@ export const signinInput = z.object({
     email: z.string().email(),
     passward: z.string().min(6),
 })
-
 export const createBlog = z.object({
     title: z.string(),
     content: z.string()
